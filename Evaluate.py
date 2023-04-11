@@ -4,13 +4,10 @@ import random
 from itertools import cycle
 import matplotlib.pyplot as plt
 import numpy as np
-from monai import transforms
 import cv2
 from efficientnet_pytorch import EfficientNet
 import torch
 import torchvision.transforms as T
-from monai.data import CacheDataset
-from monai.transforms import EnsureType, Activations, LoadImaged, AsChannelFirstD, NormalizeIntensityd, EnsureTyped
 from torch import nn
 from torch.utils.data import Dataset, DataLoader
 from pytorch_pretrained_vit import ViT

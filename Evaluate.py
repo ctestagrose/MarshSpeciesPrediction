@@ -257,15 +257,3 @@ def make_sample_saliencies(model_type, image_size):
         plt.title(model_type + ' Saliency Map')
         plt.savefig(model_type+"_Saliency_Map_"+str(counter)+".png")
         counter+=1
-
-if __name__ == "__main__":
-
-    model_types = ['ViT', 'efficientnetb0', 'efficientnetb7']
-
-    for index, mod_type in enumerate(model_types):
-        predict(model_type=mod_type, data_file="data_set_CV" + str(index + 1) + ".json", fold="CV"+str(index+1))
-
-    make_sample_saliencies(model_type="ViT")
-    make_sample_saliencies(model_type="efficientnet")
-    make_sample_saliencies(model_type="efficientnetb7")
-
